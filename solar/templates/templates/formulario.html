@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cálculo Solar</title>
+    <style>
+        .titulo-centralizado {
+            text-align: center;
+        }
+        .conteudo-centralizado {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo-centralizado">Formulário de Cálculo Solar</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="conteudo-centralizado">
+            <label for="nome">Informe seu nome:</label>
+            <input type="text" id="nome" name="nome"><br>
+            <label for="ene_kwh">Informe seu custo por kWh de sua região:</label>
+            <input type="text" id="ene_kwh" name="ene_kwh"><br>
+            <label for="ene_consumo">Informe seu custo mensal de energia (R$):</label>
+            <input type="text" id="ene_consumo" name="ene_consumo"><br>
+            <label for="hs">Informe a quantidade de horas que sua localização recebe sol:</label>
+            <input type="text" id="hs" name="hs"><br>
+            <button type="submit">Calcular</button>
+        </div>
+    </form>
+</body>
+</html>
+
